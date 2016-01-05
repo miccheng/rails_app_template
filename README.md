@@ -7,6 +7,16 @@
 rails new <app_name> -m ~/app_template.rb
 ```
 
-### Reference
+## Features
+
+- Installs Rails, Puma and RSpec.
+- Adds Slim Template support.
+- Defaults to Postgres DB.
+- Travis-CI ready.
+- Heroku ready.
+- Creates a basic root controller.
+- Initializes a Git repo.
+
+## Reference
 
 The code is adapted from the sample codes here: http://railscasts.com/episodes/148-custom-app-generators-revised
