@@ -38,7 +38,7 @@ CODE
 file '.travis.yml', <<-CODE
 language: ruby
 rvm:
-  - 2.2.2
+  - #{RUBY_VERSION}
 addons:
   postgresql: '9.3'
 bundler_args: "--without production --jobs=3"
@@ -73,7 +73,7 @@ generate 'rspec:install'
 
 if yes? "Do you want to generate a root controller?"
   name = ask("What should it be called?").underscore
-  generate :controller, "#{name} index"
+  generate :controller, "#{name} index --no-helper --no-assets --no-controller-specs --no-view-specs"
   route "root to: '#{name}\#index'"
 end
 
